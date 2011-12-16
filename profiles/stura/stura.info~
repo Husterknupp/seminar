@@ -1,0 +1,56 @@
+name = Wergehthin 
+description = Stura Standard Profile
+version = VERSION
+core = 7.x
+dependencies[] = block
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = shortcut
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = locale
+dependencies[] = admin_menu
+dependencies[] = path
+dependencies[] = pathauto
+dependencies[] = token
+dependencies[] = views
+;dependencies[] = views_export
+dependencies[] = views_ui
+dependencies[] = help
+dependencies[] = menu
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = update
+dependencies[] = features
+dependencies[] = diff
+dependencies[] = ctools
+;dependencies[] = rules
+;dependencies[] = rules_admin
+dependencies[] = trigger
+dependencies[] = strongarm
+dependencies[] = panels
+dependencies[] = page_manager
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = imagemagick
+dependencies[] = advanced_help
+dependencies[] = date_api
+dependencies[] = date
+; Stura
+dependencies[] = stura_base
+
+files[] = stura.profile
+
+; Information added by drupal.org packaging script on 2011-07-28
+version = "7.10"
+project = "drupal"
+datestamp = "1311813879"
+
