@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Katze feature.
+ */
+
+include_once('katze.features.inc');
