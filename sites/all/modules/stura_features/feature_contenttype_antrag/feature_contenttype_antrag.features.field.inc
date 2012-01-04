@@ -167,6 +167,76 @@ function feature_contenttype_antrag_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-antrag-field_antrag_antragsteller'
+  $fields['node-antrag-field_antrag_antragsteller'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_antrag_antragsteller',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tagesordnungen',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'antrag',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Erstellt den Antrag.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 12,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_antrag_antragsteller',
+      'label' => 'Antragsteller',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '14',
+      ),
+    ),
+  );
+
   // Exported field: 'node-antrag-field_antrag_eintrittspreis'
   $fields['node-antrag-field_antrag_eintrittspreis'] = array(
     'field_config' => array(
@@ -841,7 +911,9 @@ function feature_contenttype_antrag_field_default_fields() {
   // Included for use with string extractors like potx.
   t('An wen ist das beantragte Projekt hauptsächlich gerichtet?');
   t('Antragsdatum');
+  t('Antragsteller');
   t('Eintrittspreis');
+  t('Erstellt den Antrag.');
   t('Fördersumme');
   t('Inhalt');
   t('Studentenanteil');
