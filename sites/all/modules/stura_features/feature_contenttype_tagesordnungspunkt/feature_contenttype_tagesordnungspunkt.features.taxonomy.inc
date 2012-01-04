@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * feature_taxonomy.features.taxonomy.inc
+ * feature_contenttype_tagesordnungspunkt.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function feature_taxonomy_taxonomy_default_vocabularies() {
+function feature_contenttype_tagesordnungspunkt_taxonomy_default_vocabularies() {
   return array(
     'tagesordnungen' => array(
       'name' => 'Tagesordnungen',

@@ -2,6 +2,7 @@
 /**
  * @file
  * feature_contenttype_antrag.features.field.inc
+fii
  */
 
 /**
@@ -78,7 +79,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -162,7 +163,92 @@ function feature_contenttype_antrag_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_text',
-        'weight' => '4',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-antrag-field_antrag_antragsteller'
+  $fields['node-antrag-field_antrag_antragsteller'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_antrag_antragsteller',
+      'foreign keys' => array(
+        'uid' => array(
+          'columns' => array(
+            'uid' => 'uid',
+          ),
+          'table' => 'users',
+        ),
+      ),
+      'indexes' => array(
+        'uid' => array(
+          0 => 'uid',
+        ),
+      ),
+      'module' => 'user_reference',
+      'settings' => array(
+        'profile2_private' => FALSE,
+        'referenceable_roles' => array(
+          2 => '2',
+          3 => 0,
+          4 => 0,
+          5 => 0,
+          6 => 0,
+        ),
+        'referenceable_status' => array(
+          0 => 0,
+          1 => '1',
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'user_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'antrag',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'user_reference',
+          'settings' => array(),
+          'type' => 'user_reference_default',
+          'weight' => 12,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_antrag_antragsteller',
+      'label' => 'Antragssteller',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'user_reference',
+        'settings' => array(
+          'autocomplete_match' => 'contains',
+          'autocomplete_path' => 'user_reference/autocomplete',
+          'size' => '60',
+        ),
+        'type' => 'user_reference_autocomplete',
+        'weight' => '12',
       ),
     ),
   );
@@ -225,7 +311,7 @@ function feature_contenttype_antrag_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '8',
+        'weight' => '7',
       ),
     ),
   );
@@ -288,7 +374,7 @@ function feature_contenttype_antrag_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '9',
+        'weight' => '8',
       ),
     ),
   );
@@ -349,7 +435,7 @@ function feature_contenttype_antrag_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
@@ -410,7 +496,7 @@ function feature_contenttype_antrag_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );
@@ -542,7 +628,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'size' => '255',
         ),
         'type' => 'text_textfield',
-        'weight' => '12',
+        'weight' => '11',
       ),
     ),
   );
@@ -608,7 +694,7 @@ function feature_contenttype_antrag_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -692,7 +778,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '11',
+        'weight' => '10',
       ),
     ),
   );
@@ -760,7 +846,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'size' => '255',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '9',
       ),
     ),
   );
@@ -832,7 +918,7 @@ function feature_contenttype_antrag_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -841,6 +927,7 @@ function feature_contenttype_antrag_field_default_fields() {
   // Included for use with string extractors like potx.
   t('An wen ist das beantragte Projekt hauptsächlich gerichtet?');
   t('Antragsdatum');
+  t('Antragssteller');
   t('Eintrittspreis');
   t('Fördersumme');
   t('Inhalt');
