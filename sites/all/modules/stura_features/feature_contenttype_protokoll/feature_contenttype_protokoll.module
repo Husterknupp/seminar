@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the feature-contenttype-protokoll feature.
- */
-
-include_once('feature_contenttype_protokoll.features.inc');
