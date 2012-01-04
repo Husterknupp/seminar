@@ -1,5 +1,6 @@
 core = "7.x"
 dependencies[] = "features"
+dependencies[] = "node_reference"
 dependencies[] = "number"
 dependencies[] = "strongarm"
 dependencies[] = "taxonomy"

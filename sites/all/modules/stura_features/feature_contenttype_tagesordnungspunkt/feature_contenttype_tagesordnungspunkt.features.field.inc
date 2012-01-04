@@ -92,41 +92,48 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_tagesordnungspunkt_antrag',
       'foreign keys' => array(
-        'tid' => array(
+        'nid' => array(
           'columns' => array(
-            'tid' => 'tid',
+            'nid' => 'nid',
           ),
-          'table' => 'taxonomy_term_data',
+          'table' => 'node',
         ),
       ),
       'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
+        'nid' => array(
+          0 => 'nid',
         ),
       ),
-      'module' => 'taxonomy',
+      'module' => 'node_reference',
       'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'tagesordnungen',
-            'parent' => '0',
-          ),
+        'profile2_private' => FALSE,
+        'referenceable_types' => array(
+          'antrag' => 'antrag',
+          'feature_contenttype_protokoll' => 0,
+          'konto' => 0,
+          'sitzung' => 0,
+          'tagesordnungspunkt' => 0,
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
         ),
       ),
       'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
+      'type' => 'node_reference',
     ),
     'field_instance' => array(
       'bundle' => 'tagesordnungspunkt',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Wird auf dem Tagesordnungspunkt ein Antrag behandelt? Dann hier den Titel eingeben',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
+          'module' => 'node_reference',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'node_reference_default',
           'weight' => 3,
         ),
         'teaser' => array(
@@ -145,9 +152,13 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'module' => 'node_reference',
+        'settings' => array(
+          'autocomplete_match' => 'contains',
+          'autocomplete_path' => 'node_reference/autocomplete',
+          'size' => '60',
+        ),
+        'type' => 'node_reference_autocomplete',
         'weight' => '34',
       ),
     ),
@@ -291,6 +302,7 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
   t('Nummer des zu behandelnden Tagesordnungspunktes.');
   t('TOP-Nummer');
   t('Tagesordnung');
+  t('Wird auf dem Tagesordnungspunkt ein Antrag behandelt? Dann hier den Titel eingeben');
 
   return $fields;
 }
