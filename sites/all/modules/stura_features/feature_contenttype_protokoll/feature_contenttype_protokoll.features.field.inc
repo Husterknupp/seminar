@@ -222,7 +222,7 @@ function feature_contenttype_protokoll_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_tagesordnungspunkt_protok',
-      'label' => 'Tagesordnungspunkt',
+      'label' => 'Tagesordnungen',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -241,7 +241,7 @@ function feature_contenttype_protokoll_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Datum sowie Uhrzeit der Sitzung.');
   t('Datum und Uhrzeit');
-  t('Tagesordnungspunkt');
+  t('Tagesordnungen');
   t('Zusammenfassung');
 
   return $fields;
