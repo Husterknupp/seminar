@@ -83,6 +83,90 @@ function feature_contenttype_protokoll_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_datum'
+  $fields['node-feature_contenttype_protokoll-field_protokoll_datum'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_protokoll_datum',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'date',
+      'settings' => array(
+        'granularity' => array(
+          'day' => 'day',
+          'hour' => 'hour',
+          'minute' => 'minute',
+          'month' => 'month',
+          'second' => 0,
+          'year' => 'year',
+        ),
+        'repeat' => 0,
+        'timezone_db' => 'UTC',
+        'todate' => '',
+        'tz_handling' => 'site',
+      ),
+      'translatable' => '0',
+      'type' => 'datestamp',
+    ),
+    'field_instance' => array(
+      'bundle' => 'feature_contenttype_protokoll',
+      'deleted' => '0',
+      'description' => 'Datum sowie Uhrzeit der Sitzung.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'date',
+          'settings' => array(
+            'format_type' => 'long',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+            'show_repeat_rule' => 'show',
+          ),
+          'type' => 'date_default',
+          'weight' => 2,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_protokoll_datum',
+      'label' => 'Datum und Uhrzeit',
+      'required' => 0,
+      'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'blank',
+        'default_value_code' => '',
+        'default_value_code2' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'date',
+        'settings' => array(
+          'display_all_day' => 0,
+          'increment' => '15',
+          'input_format' => 'm/d/Y - H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'above',
+          'repeat_collapsed' => 0,
+          'text_parts' => array(),
+          'year_range' => '-3:+3',
+        ),
+        'type' => 'date_select',
+        'weight' => '33',
+      ),
+    ),
+  );
+
   // Exported field: 'node-feature_contenttype_protokoll-field_tagesordnungspunkt_protok'
   $fields['node-feature_contenttype_protokoll-field_tagesordnungspunkt_protok'] = array(
     'field_config' => array(
@@ -155,6 +239,8 @@ function feature_contenttype_protokoll_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Datum sowie Uhrzeit der Sitzung.');
+  t('Datum und Uhrzeit');
   t('Tagesordnungspunkt');
   t('Zusammenfassung');
 
