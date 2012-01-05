@@ -25,7 +25,16 @@ function feature_panels_default_page_manager_handlers() {
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
-    'relationships' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'Term from node',
+        'keyword' => 'term',
+        'name' => 'term_from_node',
+        'context' => 'argument_entity_id:node_1',
+        'vid' => '1',
+        'id' => 1,
+      ),
+    ),
     'access' => array(
       'logic' => 'and',
       'plugins' => array(
@@ -134,17 +143,28 @@ function feature_panels_default_page_manager_handlers() {
     $pane = new stdClass;
     $pane->pid = 'new-4';
     $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'liste_tagesordnung-panel_pane_1';
+    $pane->type = 'views';
+    $pane->subtype = 'liste_tagesordnung';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
       'context' => array(
-        0 => 'argument_entity_id:node_1',
+        0 => 'relationship_term_from_node_1.tid',
       ),
-      'arguments' => array(
-        'field_tagesordnungspunkt_to_tid' => '%node:field-sitzung-tagesordnung',
-      ),
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
