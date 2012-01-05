@@ -20,6 +20,9 @@ function feature_contenttype_protokoll_field_default_fields() {
         0 => 'node',
       ),
       'field_name' => 'body',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -34,7 +37,9 @@ function feature_contenttype_protokoll_field_default_fields() {
         ),
       ),
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -167,14 +172,17 @@ function feature_contenttype_protokoll_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-feature_contenttype_protokoll-field_tagesordnungspunkt_protok'
-  $fields['node-feature_contenttype_protokoll-field_tagesordnungspunkt_protok'] = array(
+  // Exported field: 'node-feature_contenttype_protokoll-field_tagesordnung_ref'
+  $fields['node-feature_contenttype_protokoll-field_tagesordnung_ref'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_tagesordnungspunkt_protok',
+      'field_name' => 'field_tagesordnung_ref',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -196,6 +204,7 @@ function feature_contenttype_protokoll_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -211,7 +220,7 @@ function feature_contenttype_protokoll_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 1,
+          'weight' => 3,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -221,8 +230,8 @@ function feature_contenttype_protokoll_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_tagesordnungspunkt_protok',
-      'label' => 'Tagesordnungen',
+      'field_name' => 'field_tagesordnung_ref',
+      'label' => 'Tagesordnung',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -232,7 +241,7 @@ function feature_contenttype_protokoll_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '32',
+        'weight' => '35',
       ),
     ),
   );
@@ -241,7 +250,7 @@ function feature_contenttype_protokoll_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Datum sowie Uhrzeit der Sitzung.');
   t('Datum und Uhrzeit');
-  t('Tagesordnungen');
+  t('Tagesordnung');
   t('Zusammenfassung');
 
   return $fields;
