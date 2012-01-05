@@ -162,14 +162,17 @@ function feature_contenttype_sitzung_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-sitzung-field_sitzung_tagesordnung'
-  $fields['node-sitzung-field_sitzung_tagesordnung'] = array(
+  // Exported field: 'node-sitzung-field_tagesordnung_ref'
+  $fields['node-sitzung-field_tagesordnung_ref'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_sitzung_tagesordnung',
+      'field_name' => 'field_tagesordnung_ref',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -191,6 +194,7 @@ function feature_contenttype_sitzung_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -216,9 +220,9 @@ function feature_contenttype_sitzung_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_sitzung_tagesordnung',
+      'field_name' => 'field_tagesordnung_ref',
       'label' => 'Tagesordnung',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -227,7 +231,7 @@ function feature_contenttype_sitzung_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '33',
+        'weight' => '34',
       ),
     ),
   );
