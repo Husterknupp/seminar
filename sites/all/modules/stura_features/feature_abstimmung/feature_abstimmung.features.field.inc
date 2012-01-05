@@ -18,6 +18,9 @@ function feature_abstimmung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_abstimmung_enthaltungen',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
@@ -81,6 +84,9 @@ function feature_abstimmung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_abstimmung_ergebnis',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -145,6 +151,9 @@ function feature_abstimmung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_abstimmung_ja',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
@@ -208,6 +217,9 @@ function feature_abstimmung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_abstimmung_nein',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
