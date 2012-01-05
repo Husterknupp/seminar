@@ -24,7 +24,7 @@ function feature_abstimmung_node_info() {
       'base' => 'node_content',
       'description' => t('Die Abstimmung zu einem Antrag'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );
