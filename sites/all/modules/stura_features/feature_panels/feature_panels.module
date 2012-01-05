@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature-panels feature.
+ */
+
+include_once('feature_panels.features.inc');
