@@ -96,6 +96,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_antragsdatum',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'date',
@@ -108,6 +111,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'profile2_private' => FALSE,
         'repeat' => 0,
         'timezone_db' => 'UTC',
         'todate' => '',
@@ -180,6 +184,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_antragsteller',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'uid' => array(
           'columns' => array(
@@ -202,6 +209,7 @@ function feature_contenttype_antrag_field_default_fields() {
           4 => 0,
           5 => 0,
           6 => 0,
+          7 => 0,
         ),
         'referenceable_status' => array(
           0 => 0,
@@ -245,13 +253,13 @@ function feature_contenttype_antrag_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'user_reference',
+        'module' => 'options',
         'settings' => array(
           'autocomplete_match' => 'contains',
           'autocomplete_path' => 'user_reference/autocomplete',
           'size' => '60',
         ),
-        'type' => 'user_reference_autocomplete',
+        'type' => 'options_select',
         'weight' => '12',
       ),
     ),
@@ -265,11 +273,15 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_eintrittspreis',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => ',',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -328,11 +340,15 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_foerdersumme',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => ',',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -391,10 +407,15 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_studentenanteil',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'number_integer',
     ),
@@ -452,10 +473,15 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_teilnehmerzahl',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'number_integer',
     ),
@@ -513,6 +539,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_typ',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -528,6 +557,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'other' => 'sonstiger Antrag',
         ),
         'allowed_values_function' => '',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_text',
@@ -645,6 +675,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_vorschusszahlung',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -658,6 +691,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'no' => 'Vorschusszahlung unerwünscht',
         ),
         'allowed_values_function' => '',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_text',
@@ -711,6 +745,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_zeitraum',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'date',
@@ -723,6 +760,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'profile2_private' => FALSE,
         'repeat' => 0,
         'timezone_db' => 'UTC',
         'todate' => 'optional',
@@ -795,6 +833,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_zielgruppe',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -811,6 +852,7 @@ function feature_contenttype_antrag_field_default_fields() {
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'text',
@@ -863,6 +905,9 @@ function feature_contenttype_antrag_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_antrag_zustand',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -882,6 +927,7 @@ function feature_contenttype_antrag_field_default_fields() {
           'refused' => 'Antrag formal/inhaltlich unbehandelt abgelehnt',
         ),
         'allowed_values_function' => '',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_text',

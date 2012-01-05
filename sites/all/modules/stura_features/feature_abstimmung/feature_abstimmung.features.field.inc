@@ -283,6 +283,9 @@ function feature_abstimmung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_abstimmung_top',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'nid' => array(
           'columns' => array(
@@ -302,6 +305,7 @@ function feature_abstimmung_field_default_fields() {
         'referenceable_types' => array(
           'abstimmung' => 0,
           'antrag' => 0,
+          'bescheid' => 0,
           'feature_contenttype_protokoll' => 0,
           'finanzplan' => 0,
           'konto' => 0,
@@ -346,13 +350,9 @@ function feature_abstimmung_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'node_reference',
-        'settings' => array(
-          'autocomplete_match' => 'contains',
-          'autocomplete_path' => 'node_reference/autocomplete',
-          'size' => '60',
-        ),
-        'type' => 'node_reference_autocomplete',
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
         'weight' => '35',
       ),
     ),

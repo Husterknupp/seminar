@@ -97,7 +97,7 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_tagesordnung_ref',
       'field_permissions' => array(
-        'type' => '0',
+        'type' => '2',
       ),
       'foreign keys' => array(
         'tid' => array(
@@ -170,6 +170,9 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_tagesordnungspunkt_antrag',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'nid' => array(
           'columns' => array(
@@ -187,8 +190,11 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'settings' => array(
         'profile2_private' => FALSE,
         'referenceable_types' => array(
+          'abstimmung' => 0,
           'antrag' => 'antrag',
+          'bescheid' => 0,
           'feature_contenttype_protokoll' => 0,
+          'finanzplan' => 0,
           'konto' => 0,
           'sitzung' => 0,
           'tagesordnungspunkt' => 0,
@@ -231,13 +237,9 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'node_reference',
-        'settings' => array(
-          'autocomplete_match' => 'contains',
-          'autocomplete_path' => 'node_reference/autocomplete',
-          'size' => '60',
-        ),
-        'type' => 'node_reference_autocomplete',
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
         'weight' => '34',
       ),
     ),
@@ -251,10 +253,15 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_tagesordnungspunkt_nr',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'number_integer',
     ),

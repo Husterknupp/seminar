@@ -18,6 +18,9 @@ function feature_contenttype_sitzung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_sitzung_ort',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -34,6 +37,7 @@ function feature_contenttype_sitzung_field_default_fields() {
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'text',
@@ -86,6 +90,9 @@ function feature_contenttype_sitzung_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_sitzung_sitzungsdatum',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'date',
@@ -98,6 +105,7 @@ function feature_contenttype_sitzung_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'profile2_private' => FALSE,
         'repeat' => 0,
         'timezone_db' => 'UTC',
         'todate' => 'required',
@@ -171,7 +179,7 @@ function feature_contenttype_sitzung_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_tagesordnung_ref',
       'field_permissions' => array(
-        'type' => '0',
+        'type' => '2',
       ),
       'foreign keys' => array(
         'tid' => array(
