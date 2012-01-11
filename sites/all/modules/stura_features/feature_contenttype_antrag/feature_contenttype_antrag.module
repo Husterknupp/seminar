@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the feature-contenttype-antrag feature.
- */
-
-include_once('feature_contenttype_antrag.features.inc');
