@@ -498,41 +498,6 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
     $display->panels['left_above'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
-    $pane->panel = 'left_above';
-    $pane->type = 'views';
-    $pane->subtype = 'antrag_kontaktdaten';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'context' => array(
-        0 => '',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-3'] = $pane;
-    $display->panels['left_above'][2] = 'new-3';
-    $pane = new stdClass;
-    $pane->pid = 'new-4';
     $pane->panel = 'left_below';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_antrag_vorschusszahlung';
@@ -553,10 +518,10 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-4'] = $pane;
-    $display->panels['left_below'][0] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['left_below'][0] = 'new-3';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -577,10 +542,10 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-5'] = $pane;
-    $display->panels['middle'][0] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][0] = 'new-4';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-5';
     $pane->panel = 'right_above';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_antrag_zeitraum';
@@ -608,10 +573,10 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-6'] = $pane;
-    $display->panels['right_above'][0] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['right_above'][0] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-6';
     $pane->panel = 'right_above';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_antrag_typ';
@@ -632,10 +597,10 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-7'] = $pane;
-    $display->panels['right_above'][1] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['right_above'][1] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-7';
     $pane->panel = 'right_below';
     $pane->type = 'views';
     $pane->subtype = 'antrag_kontodaten';
@@ -655,7 +620,42 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
       'url' => '',
       'display' => 'default',
       'context' => array(
-        0 => '',
+        0 => 'argument_entity_id:node_1.nid',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-7'] = $pane;
+    $display->panels['right_below'][0] = 'new-7';
+    $pane = new stdClass;
+    $pane->pid = 'new-8';
+    $pane->panel = 'top';
+    $pane->type = 'views';
+    $pane->subtype = 'antrag_kontaktdaten';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => 'argument_entity_id:node_1.nid',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -668,32 +668,7 @@ Name, Vorname, Matrikel, Useraccount, AntragsGODatun etc...',
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-8'] = $pane;
-    $display->panels['right_below'][0] = 'new-8';
-    $pane = new stdClass;
-    $pane->pid = 'new-9';
-    $pane->panel = 'top';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => 'Platzhalter für ASView:
-
-Name, Vorname',
-      'format' => 'plain_text',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-9'] = $pane;
-    $display->panels['top'][0] = 'new-9';
+    $display->panels['top'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
