@@ -801,8 +801,10 @@ untereinander aufgelistet',
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Button für Abstimmung einfügen',
-      'body' => 'Ein Abstimmungspopup mit Titel Stimmen usw.',
+      'title' => '',
+      'body' => 'http://localhost/seminar/node/add/tagesordnungspunkt
+
+keine Ahnung wie das richtig funkt. Hab sogar n Link Module installiert',
       'format' => 'plain_text',
       'substitute' => 1,
     );
@@ -824,8 +826,8 @@ untereinander aufgelistet',
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Button für nicht offiziellen Teil',
-      'body' => 'Popup für nicht offiziellen Teil',
+      'title' => 'Button für Abstimmung einfügen',
+      'body' => 'Ein Abstimmungspopup mit Titel Stimmen usw.',
       'format' => 'plain_text',
       'substitute' => 1,
     );
@@ -840,6 +842,29 @@ untereinander aufgelistet',
     $display->panels['left'][3] = 'new-5';
     $pane = new stdClass;
     $pane->pid = 'new-6';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Button für nicht offiziellen Teil',
+      'body' => 'Popup für nicht offiziellen Teil',
+      'format' => 'plain_text',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $display->content['new-6'] = $pane;
+    $display->panels['left'][4] = 'new-6';
+    $pane = new stdClass;
+    $pane->pid = 'new-7';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_protokoll_datum';
@@ -867,10 +892,10 @@ untereinander aufgelistet',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][0] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -890,10 +915,10 @@ untereinander aufgelistet',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][1] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -913,10 +938,10 @@ untereinander aufgelistet',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][2] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['right'][2] = 'new-9';
     $pane = new stdClass;
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -936,10 +961,45 @@ untereinander aufgelistet',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 3;
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][3] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['right'][3] = 'new-10';
     $pane = new stdClass;
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
+    $pane->panel = 'right';
+    $pane->type = 'views';
+    $pane->subtype = 'protokoll_sitzung_details';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => 'argument_entity_id:node_1.nid',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $display->content['new-11'] = $pane;
+    $display->panels['right'][4] = 'new-11';
+    $pane = new stdClass;
+    $pane->pid = 'new-12';
     $pane->panel = 'top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -959,8 +1019,8 @@ untereinander aufgelistet',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-10'] = $pane;
-    $display->panels['top'][0] = 'new-10';
+    $display->content['new-12'] = $pane;
+    $display->panels['top'][0] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
