@@ -10,84 +10,6 @@
 function feature_contenttype_protokoll_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-feature_contenttype_protokoll-body'
-  $fields['node-feature_contenttype_protokoll-body'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(
-        0 => 'node',
-      ),
-      'field_name' => 'body',
-      'field_permissions' => array(
-        'type' => '2',
-      ),
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'module' => 'text',
-      'settings' => array(
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'text_with_summary',
-    ),
-    'field_instance' => array(
-      'bundle' => 'feature_contenttype_protokoll',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'trim_length' => 600,
-          ),
-          'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'body',
-      'label' => 'Zusammenfassung',
-      'required' => 0,
-      'settings' => array(
-        'display_summary' => 1,
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '20',
-          'summary_rows' => 5,
-        ),
-        'type' => 'text_textarea_with_summary',
-        'weight' => '31',
-      ),
-    ),
-  );
-
   // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_datum'
   $fields['node-feature_contenttype_protokoll-field_protokoll_datum'] = array(
     'field_config' => array(
@@ -167,7 +89,77 @@ function feature_contenttype_protokoll_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_select',
-        'weight' => '33',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_zusammenfassung'
+  $fields['node-feature_contenttype_protokoll-field_protokoll_zusammenfassung'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_protokoll_zusammenfassung',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'module' => 'text',
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'text_with_summary',
+    ),
+    'field_instance' => array(
+      'bundle' => 'feature_contenttype_protokoll',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 4,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_protokoll_zusammenfassung',
+      'label' => 'Zusammenfassung',
+      'required' => 0,
+      'settings' => array(
+        'display_summary' => 1,
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '20',
+          'summary_rows' => 5,
+        ),
+        'type' => 'text_textarea_with_summary',
+        'weight' => '2',
       ),
     ),
   );
@@ -241,7 +233,7 @@ function feature_contenttype_protokoll_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '35',
+        'weight' => '4',
       ),
     ),
   );
