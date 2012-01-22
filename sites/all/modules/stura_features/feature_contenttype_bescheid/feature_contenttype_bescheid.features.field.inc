@@ -18,6 +18,9 @@ function feature_contenttype_bescheid_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_bescheid_antrag',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'nid' => array(
           'columns' => array(
@@ -33,10 +36,14 @@ function feature_contenttype_bescheid_field_default_fields() {
       ),
       'module' => 'node_reference',
       'settings' => array(
+        'profile2_private' => FALSE,
         'referenceable_types' => array(
+          'abstimmung' => 0,
           'antrag' => 'antrag',
           'bescheid' => 0,
           'feature_contenttype_protokoll' => 0,
+          'finanzplan' => 0,
+          'konto' => 0,
           'sitzung' => 0,
           'tagesordnungspunkt' => 0,
         ),
@@ -94,6 +101,9 @@ function feature_contenttype_bescheid_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_bescheid_antragsgenehm',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -107,6 +117,7 @@ function feature_contenttype_bescheid_field_default_fields() {
           'not approved' => 'nicht genehmigt',
         ),
         'allowed_values_function' => '',
+        'profile2_private' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_text',
@@ -156,10 +167,15 @@ function feature_contenttype_bescheid_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_bescheid_bescheidsnummer',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'number_integer',
     ),

@@ -18,6 +18,9 @@ function feature_konto_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_konto_bankleitzahl',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
@@ -81,6 +84,9 @@ function feature_konto_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_konto_iban',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -150,6 +156,9 @@ function feature_konto_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_konto_kontonummer',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
@@ -213,6 +222,9 @@ function feature_konto_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_konto_kreditinstitut',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -282,6 +294,9 @@ function feature_konto_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_konto_person',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'uid' => array(
           'columns' => array(
@@ -308,7 +323,7 @@ function feature_konto_field_default_fields() {
         ),
         'referenceable_status' => array(
           0 => 0,
-          1 => 0,
+          1 => '1',
         ),
         'view' => array(
           'args' => array(),
@@ -348,13 +363,13 @@ function feature_konto_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'user_reference',
+        'module' => 'options',
         'settings' => array(
           'autocomplete_match' => 'contains',
           'autocomplete_path' => 'user_reference/autocomplete',
           'size' => '60',
         ),
-        'type' => 'user_reference_autocomplete',
+        'type' => 'options_select',
         'weight' => '6',
       ),
     ),

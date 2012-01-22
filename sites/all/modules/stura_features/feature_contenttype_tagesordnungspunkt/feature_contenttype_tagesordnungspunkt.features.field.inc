@@ -79,7 +79,7 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '35',
       ),
     ),
   );
@@ -92,6 +92,9 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_tagesordnungspunkt_antrag',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(
         'nid' => array(
           'columns' => array(
@@ -109,8 +112,11 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'settings' => array(
         'profile2_private' => FALSE,
         'referenceable_types' => array(
+          'abstimmung' => 0,
           'antrag' => 'antrag',
+          'bescheid' => 0,
           'feature_contenttype_protokoll' => 0,
+          'finanzplan' => 0,
           'konto' => 0,
           'sitzung' => 0,
           'tagesordnungspunkt' => 0,
@@ -243,10 +249,15 @@ function feature_contenttype_tagesordnungspunkt_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_tagesordnungspunkt_nr',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'number',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'number_integer',
     ),

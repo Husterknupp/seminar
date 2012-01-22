@@ -18,6 +18,9 @@ function feature_contenttype_protokoll_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_protokoll_datum',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'date',
@@ -30,6 +33,7 @@ function feature_contenttype_protokoll_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'profile2_private' => FALSE,
         'repeat' => 0,
         'timezone_db' => 'UTC',
         'todate' => '',
@@ -164,6 +168,176 @@ function feature_contenttype_protokoll_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_protokollant'
+  $fields['node-feature_contenttype_protokoll-field_protokoll_protokollant'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_protokoll_protokollant',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
+      'foreign keys' => array(
+        'uid' => array(
+          'columns' => array(
+            'uid' => 'uid',
+          ),
+          'table' => 'users',
+        ),
+      ),
+      'indexes' => array(
+        'uid' => array(
+          0 => 'uid',
+        ),
+      ),
+      'module' => 'user_reference',
+      'settings' => array(
+        'profile2_private' => FALSE,
+        'referenceable_roles' => array(
+          2 => 0,
+          3 => 0,
+          4 => 0,
+          5 => '5',
+          6 => 0,
+          7 => 0,
+        ),
+        'referenceable_status' => array(
+          0 => 0,
+          1 => '1',
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'user_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'feature_contenttype_protokoll',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'user_reference',
+          'settings' => array(),
+          'type' => 'user_reference_default',
+          'weight' => 6,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_protokoll_protokollant',
+      'label' => 'Protokollant',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '38',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_sitzungsleiter'
+  $fields['node-feature_contenttype_protokoll-field_protokoll_sitzungsleiter'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_protokoll_sitzungsleiter',
+      'field_permissions' => array(
+        'type' => '2',
+      ),
+      'foreign keys' => array(
+        'uid' => array(
+          'columns' => array(
+            'uid' => 'uid',
+          ),
+          'table' => 'users',
+        ),
+      ),
+      'indexes' => array(
+        'uid' => array(
+          0 => 'uid',
+        ),
+      ),
+      'module' => 'user_reference',
+      'settings' => array(
+        'profile2_private' => FALSE,
+        'referenceable_roles' => array(
+          2 => 0,
+          3 => 0,
+          4 => 0,
+          5 => '5',
+          6 => 0,
+          7 => 0,
+        ),
+        'referenceable_status' => array(
+          0 => 0,
+          1 => '1',
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'user_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'feature_contenttype_protokoll',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'user_reference',
+          'settings' => array(),
+          'type' => 'user_reference_default',
+          'weight' => 5,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_protokoll_sitzungsleiter',
+      'label' => 'Sitzungsleiter',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '37',
+      ),
+    ),
+  );
+
   // Exported field: 'node-feature_contenttype_protokoll-field_tagesordnung_ref'
   $fields['node-feature_contenttype_protokoll-field_tagesordnung_ref'] = array(
     'field_config' => array(
@@ -173,7 +347,7 @@ function feature_contenttype_protokoll_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_tagesordnung_ref',
       'field_permissions' => array(
-        'type' => '0',
+        'type' => '2',
       ),
       'foreign keys' => array(
         'tid' => array(
@@ -242,6 +416,8 @@ function feature_contenttype_protokoll_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Datum sowie Uhrzeit der Sitzung.');
   t('Datum und Uhrzeit');
+  t('Protokollant');
+  t('Sitzungsleiter');
   t('Tagesordnung');
   t('Zusammenfassung');
 
