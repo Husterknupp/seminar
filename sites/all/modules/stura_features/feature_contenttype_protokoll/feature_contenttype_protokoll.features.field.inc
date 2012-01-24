@@ -94,6 +94,86 @@ function feature_contenttype_protokoll_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_top'
+  $fields['node-feature_contenttype_protokoll-field_protokoll_top'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_protokoll_top',
+      'foreign keys' => array(
+        'nid' => array(
+          'columns' => array(
+            'nid' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'nid' => array(
+          0 => 'nid',
+        ),
+      ),
+      'module' => 'node_reference',
+      'settings' => array(
+        'profile2_private' => FALSE,
+        'referenceable_types' => array(
+          'abstimmung' => 0,
+          'antrag' => 0,
+          'bescheid' => 0,
+          'feature_contenttype_protokoll' => 0,
+          'finanzplan' => 0,
+          'konto' => 0,
+          'sitzung' => 0,
+          'tagesordnungspunkt' => 'tagesordnungspunkt',
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => '',
+          'view_name' => '',
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'node_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'feature_contenttype_protokoll',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Der konkrete Tagesordnugnspunkt, auf den sich der Protokollpunkt bezieht.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'node_reference',
+          'settings' => array(),
+          'type' => 'node_reference_default',
+          'weight' => 5,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_protokoll_top',
+      'label' => 'Tagesordnungspunkt',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '32',
+      ),
+    ),
+  );
+
   // Exported field: 'node-feature_contenttype_protokoll-field_protokoll_zusammenfassung'
   $fields['node-feature_contenttype_protokoll-field_protokoll_zusammenfassung'] = array(
     'field_config' => array(
@@ -164,85 +244,12 @@ function feature_contenttype_protokoll_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-feature_contenttype_protokoll-field_tagesordnung_ref'
-  $fields['node-feature_contenttype_protokoll-field_tagesordnung_ref'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_tagesordnung_ref',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'tagesordnungen',
-            'parent' => '0',
-          ),
-        ),
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'feature_contenttype_protokoll',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 3,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_tagesordnung_ref',
-      'label' => 'Tagesordnung',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '4',
-      ),
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Datum sowie Uhrzeit der Sitzung.');
   t('Datum und Uhrzeit');
-  t('Tagesordnung');
+  t('Der konkrete Tagesordnugnspunkt, auf den sich der Protokollpunkt bezieht.');
+  t('Tagesordnungspunkt');
   t('Zusammenfassung');
 
   return $fields;

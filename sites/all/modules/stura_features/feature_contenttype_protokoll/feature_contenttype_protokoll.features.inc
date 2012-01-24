@@ -20,11 +20,11 @@ function feature_contenttype_protokoll_ctools_plugin_api() {
 function feature_contenttype_protokoll_node_info() {
   $items = array(
     'feature_contenttype_protokoll' => array(
-      'name' => t('Protokoll'),
+      'name' => t('Protokollpunkt'),
       'base' => 'node_content',
-      'description' => t('Protokoll enthält Informationen zur Sitzung.'),
+      'description' => t('Ein Protokollpunkt enthält die Informationen eines Tagesordnungspunkts und ist diesem zugeordnet.'),
       'has_title' => '1',
-      'title_label' => t('Protkolltitel'),
+      'title_label' => t('Protokollpunkt'),
       'help' => '',
     ),
   );
