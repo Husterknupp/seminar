@@ -309,7 +309,6 @@ function feature_contenttype_bescheid_field_default_fields() {
   t('Antrag genehmigt oder Antrag nicht genehmigt.');
   t('Antragsgenehmigung');
   t('Bescheidsnummer');
-  t('Body');
   t('Verweist Bescheid an den Antrag.');
 
   return $fields;
